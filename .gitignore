@@ -1,1 +1,21 @@
 /.idea/
+# Docker specific
+.docker/
+docker-compose.override.yml
+
+# MongoDB and MySQL data (databases)
+mongodb/
+mysqldb/
+
+# Logs
+*.log
+*.pid
+*.sock
+
+# Temporary files
+*.tmp
+*.swp
+*.bak
+
+# .env files with sensitive information
+.env*
