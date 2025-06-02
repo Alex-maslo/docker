@@ -1,21 +1,4 @@
 services:
   database-mysql:
-    image: mysql:latest
-    env_file:
-      - .env.mysql
-    restart: on-failure
-    ports:
-      - "5555:3306"
-    volumes:
-      - ./mysqldb:/var/lib/mysql
-
-  database-mongo:
-    image: mongo:latest
-    env_file:
-      - .env.mongo
-    volumes:
-      - ./mongodb:/data/db
-      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
-    restart: on-failure
-    ports:
-      - "27017:27017"
+    image:
+      mysql:latest
